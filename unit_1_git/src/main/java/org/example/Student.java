@@ -4,6 +4,7 @@ public class Student {
 
     private String name;
     private String email;
+    private String email2;
 
     public String getName() {
         return name;
