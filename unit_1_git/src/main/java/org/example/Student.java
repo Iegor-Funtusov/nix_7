@@ -22,11 +22,20 @@ public class Student {
         this.email = email;
     }
 
+    public String getEmail2() {
+        return email2;
+    }
+
+    public void setEmail2(String email2) {
+        this.email2 = email2;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
                 "name='" + name + '\'' +
                 ", email='" + email + '\'' +
+                ", email2='" + email2 + '\'' +
                 '}';
     }
 }
