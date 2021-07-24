@@ -12,6 +12,7 @@
         <module>unit_1_git</module>
         <module>unit_3_review_types</module>
         <module>unit_4_about_all_operations</module>
+        <module>unit_5_object</module>
     </modules>
 
     <properties>
