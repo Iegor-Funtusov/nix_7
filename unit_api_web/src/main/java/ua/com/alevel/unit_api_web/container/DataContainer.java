@@ -7,4 +7,12 @@ public class DataContainer<T> {
     public DataContainer(T t) {
         data = t;
     }
+
+    public T getData() {
+        return data;
+    }
+
+    public void setData(T data) {
+        this.data = data;
+    }
 }
