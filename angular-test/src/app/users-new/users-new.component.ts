@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, FormGroup} from "@angular/forms";
-import {UsersService} from "../users.service";
-import {Router} from "@angular/router";
+import { Router } from '@angular/router';
+
+import { FormControl, FormGroup } from '@angular/forms';
+import { UsersService } from '../users.service';
 
 @Component({
   selector: 'app-users-new',
