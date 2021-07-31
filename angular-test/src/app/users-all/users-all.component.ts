@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {UsersService} from "../users.service";
-import {Observable} from "rxjs";
-import {UserModel} from "../user.model";
+import { UsersService } from '../users.service';
+import { UserModel } from '../user.model';
 
 @Component({
   selector: 'app-users-all',
@@ -19,5 +18,4 @@ export class UsersAllComponent implements OnInit {
       this.users = value;
     });
   }
-
 }
