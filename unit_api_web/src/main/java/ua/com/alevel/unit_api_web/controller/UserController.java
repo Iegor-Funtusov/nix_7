@@ -26,13 +26,13 @@ public class UserController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<DataContainer<Boolean>>delete(@PathVariable String id) {
+    public ResponseEntity<DataContainer<Boolean>>delete(@PathVariable Integer id) {
         userService.delete(id);
         return ResponseEntity.ok(new DataContainer<>(true));
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<DataContainer<User>>findById(@PathVariable String id) {
+    public ResponseEntity<DataContainer<User>>findById(@PathVariable Integer id) {
         return ResponseEntity.ok(new DataContainer<>(userService.findById(id)));
     }
 

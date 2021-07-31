@@ -1,0 +1,20 @@
+<div>
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">name</th>
+      <th scope="col">age</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of users">
+      <th>{{ user.id }}</th>
+      <td>{{ user.name }}</td>
+      <td>{{ user.age }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<a routerLink="/users-new">new</a>
