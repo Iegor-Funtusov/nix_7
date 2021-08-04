@@ -14,6 +14,7 @@
         <module>unit_4_about_all_operations</module>
         <module>unit_5_object</module>
         <module>unit_6_strings</module>
+        <module>unit_7_test_and_logs</module>
     </modules>
 
     <properties>
