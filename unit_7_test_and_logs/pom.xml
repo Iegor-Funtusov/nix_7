@@ -30,9 +30,10 @@
         <profile>
             <id>test</id>
             <properties>
-                <log.info>${logs.folder}/${logs.test.folder}/info.log</log.info>
-                <log.warn>${logs.folder}/${logs.test.folder}/warn.log</log.warn>
-                <log.error>${logs.folder}/${logs.test.folder}/error.log</log.error>
+                <log.path>${logs.folder}/${logs.test.folder}</log.path>
+                <log.info>${log.path}/info.log</log.info>
+                <log.warn>${log.path}/warn.log</log.warn>
+                <log.error>${log.path}/error.log</log.error>
             </properties>
         </profile>
         <profile>
@@ -41,9 +42,10 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <log.info>${logs.folder}/${logs.life.folder}/info.log</log.info>
-                <log.warn>${logs.folder}/${logs.life.folder}/warn.log</log.warn>
-                <log.error>${logs.folder}/${logs.life.folder}/error.log</log.error>
+                <log.path>${logs.folder}/${logs.life.folder}</log.path>
+                <log.info>${log.path}/info.log</log.info>
+                <log.warn>${log.path}/warn.log</log.warn>
+                <log.error>${log.path}/error.log</log.error>
             </properties>
         </profile>
     </profiles>

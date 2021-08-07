@@ -19,7 +19,7 @@
         <file>${log.info}</file>
 
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-            <fileNamePattern>${HOME_LOG}/${ARCHIVED_LOG}/info/app.%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
+            <fileNamePattern>${log.path}/${ARCHIVED_LOG}/info/app.%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
             <maxFileSize>1MB</maxFileSize>
             <totalSizeCap>2GB</totalSizeCap>
             <maxHistory>60</maxHistory>
@@ -35,7 +35,7 @@
         <file>${log.warn}</file>
 
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-            <fileNamePattern>${HOME_LOG}/${ARCHIVED_LOG}/warn/app.%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
+            <fileNamePattern>${log.path}/${ARCHIVED_LOG}/warn/app.%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
             <maxFileSize>1MB</maxFileSize>
             <totalSizeCap>2GB</totalSizeCap>
             <maxHistory>60</maxHistory>
@@ -51,7 +51,7 @@
         <file>${log.error}</file>
 
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-            <fileNamePattern>${HOME_LOG}/${ARCHIVED_LOG}/error/app.%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
+            <fileNamePattern>${log.path}/${ARCHIVED_LOG}/error/app.%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
             <maxFileSize>1MB</maxFileSize>
             <totalSizeCap>2GB</totalSizeCap>
             <maxHistory>60</maxHistory>
