@@ -22,15 +22,6 @@ public class UserServiceTest {
     }
 
     @Test
-    @Order(1)
-    public void checkedAgeCorrectly() {
-        boolean checkedAge = userService.checkedAgeCorrectly(-10);
-        Assertions.assertFalse(checkedAge);
-        checkedAge = userService.checkedAgeCorrectly(10);
-        Assertions.assertTrue(checkedAge);
-    }
-
-    @Test
     @Order(2)
     public void createUserIfAgeNotValid() {
         User user = UserGenerationUtil.generateUser(100);
@@ -58,9 +49,19 @@ public class UserServiceTest {
 
     @Test
     @Order(5)
-    public void findAll() {}
+    public void findAll() {
+        List<User> users = userService.findAllUsers();
+        Assertions.assertEquals(USERS_SIZE + 1, users.size());
+    }
 
     @Test
     @Order(6)
-    public void delete() {}
+    public void delete() {
+        List<User> users = userService.findAllUsers();
+        Assertions.assertEquals(USERS_SIZE + 1, users.size());
+        User user = users.get(0);
+        userService.delete(user.getId());
+        users = userService.findAllUsers();
+        Assertions.assertEquals(USERS_SIZE, users.size());
+    }
 }

@@ -19,7 +19,6 @@ public class InMemoryUserDao {
         User inDbUser = findUserById(user.getId());
         inDbUser.setAge(user.getAge());
         inDbUser.setName(user.getName());
-        users.add(user);
     }
 
     public void delete(String id) {
