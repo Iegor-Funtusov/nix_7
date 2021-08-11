@@ -1,10 +1,9 @@
 package ua.com.alevel.controller;
 
+import ua.com.alevel.config.ObjectFactory;
 import ua.com.alevel.dto.UserDto;
 import ua.com.alevel.facade.SecurityFacade;
 import ua.com.alevel.facade.UserFacade;
-import ua.com.alevel.facade.impl.SecurityFacadeImpl;
-import ua.com.alevel.facade.impl.UserFacadeImpl;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -13,8 +12,8 @@ import java.util.List;
 
 public class UserController {
 
-    private final UserFacade userFacade = new UserFacadeImpl();
-    private final SecurityFacade securityFacade = new SecurityFacadeImpl();
+    private final UserFacade userFacade = ObjectFactory.getInstance().getImplClass(UserFacade.class);
+    private final SecurityFacade securityFacade = ObjectFactory.getInstance().getImplClass(SecurityFacade.class);
 
     public void start() {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));

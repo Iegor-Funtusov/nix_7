@@ -16,7 +16,6 @@ public class UserServiceImpl implements UserService {
     public void create(User user) {
         if (!userDao.existByEmail(user.getEmail())) {
             String password = SecurityUtil.hashPassword(user.getPassword());
-            System.out.println("password = " + password);
             user.setPassword(password);
             userDao.create(user);
         }

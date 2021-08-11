@@ -1,20 +1,19 @@
 package ua.com.alevel.facade.impl;
 
+import ua.com.alevel.config.ObjectFactory;
 import ua.com.alevel.dto.UserDto;
 import ua.com.alevel.entity.User;
 import ua.com.alevel.facade.UserFacade;
 import ua.com.alevel.service.SecurityService;
 import ua.com.alevel.service.UserService;
-import ua.com.alevel.service.impl.SecurityServiceImpl;
-import ua.com.alevel.service.impl.UserServiceImpl;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class UserFacadeImpl implements UserFacade {
 
-    private final UserService userService = new UserServiceImpl();
-    private final SecurityService securityService = new SecurityServiceImpl();
+    private final UserService userService = ObjectFactory.getInstance().getImplClass(UserService.class);
+    private final SecurityService securityService = ObjectFactory.getInstance().getImplClass(SecurityService.class);
 
     @Override
     public void register(String email, String password) {
