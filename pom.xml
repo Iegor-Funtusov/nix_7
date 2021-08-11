@@ -15,6 +15,7 @@
         <module>unit_5_object</module>
         <module>unit_6_strings</module>
         <module>unit_7_test_and_logs</module>
+        <module>unit_8_crud_lookup</module>
     </modules>
 
     <properties>
