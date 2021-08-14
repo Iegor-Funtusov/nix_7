@@ -16,6 +16,8 @@
         <module>unit_6_strings</module>
         <module>unit_7_test_and_logs</module>
         <module>unit_8_crud_lookup</module>
+        <module>unit_9_di_solid</module>
+        <module>diframework</module>
     </modules>
 
     <properties>

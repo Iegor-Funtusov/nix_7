@@ -1,7 +1,6 @@
 package ua.com.alevel.service.impl;
 
 import ua.com.alevel.dao.UserDao;
-import ua.com.alevel.dao.impl.UserDaoImpl;
 import ua.com.alevel.entity.User;
 import ua.com.alevel.service.UserService;
 import ua.com.alevel.util.SecurityUtil;
@@ -10,7 +9,7 @@ import java.util.List;
 
 public class UserServiceImpl implements UserService {
 
-    private final UserDao userDao = new UserDaoImpl();
+    private UserDao userDao;
 
     @Override
     public void create(User user) {
