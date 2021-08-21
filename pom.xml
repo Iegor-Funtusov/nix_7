@@ -19,6 +19,7 @@
         <module>unit_9_di_solid</module>
         <module>diframework</module>
         <module>unit_10_exception</module>
+        <module>unit_11_date_api</module>
     </modules>
 
     <properties>
