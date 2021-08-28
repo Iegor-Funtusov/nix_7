@@ -3,6 +3,7 @@ package ua.com.alevel.data;
 import java.util.Objects;
 
 public class User implements Comparable<User> {
+//public class User {
 
     private int id;
     private String name;

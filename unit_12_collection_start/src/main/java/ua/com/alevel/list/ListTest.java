@@ -7,7 +7,7 @@ import java.util.List;
 
 public class ListTest {
 
-    private static final int SIZE = 500_000;
+    private static final int SIZE = 4_000_000;
 
     public void banch() {
         List<Integer> arrayList = new ArrayList<>();
@@ -34,22 +34,22 @@ public class ListTest {
 
         // remove
 
-        Iterator<Integer> iterator = arrayList.iterator();
-        start = System.currentTimeMillis();
-        while (iterator.hasNext()) {
-            iterator.next();
-            iterator.remove();
-        }
-        end = System.currentTimeMillis() - start;
-        System.out.println("remove: arrayList end = " + end);
-
-        iterator = linkedList.iterator();
-        start = System.currentTimeMillis();
-        while (iterator.hasNext()) {
-            iterator.next();
-            iterator.remove();
-        }
-        end = System.currentTimeMillis() - start;
-        System.out.println("remove: linkedList end = " + end);
+//        Iterator<Integer> iterator = arrayList.iterator();
+//        start = System.currentTimeMillis();
+//        while (iterator.hasNext()) {
+//            iterator.next();
+//            iterator.remove();
+//        }
+//        end = System.currentTimeMillis() - start;
+//        System.out.println("remove: arrayList end = " + end);
+//
+//        iterator = linkedList.iterator();
+//        start = System.currentTimeMillis();
+//        while (iterator.hasNext()) {
+//            iterator.next();
+//            iterator.remove();
+//        }
+//        end = System.currentTimeMillis() - start;
+//        System.out.println("remove: linkedList end = " + end);
     }
 }
