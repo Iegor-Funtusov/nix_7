@@ -21,6 +21,7 @@
         <module>unit_10_exception</module>
         <module>unit_11_date_api</module>
         <module>unit_12_collection_start</module>
+        <module>unit_13_ionio</module>
     </modules>
 
     <properties>
