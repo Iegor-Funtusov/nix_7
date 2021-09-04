@@ -1,9 +1,5 @@
 package ua.com.alevel;
 
-import ua.com.alevel.io.IOFileCrudService;
-import ua.com.alevel.nio.NIOFileCrudService;
-import ua.com.alevel.serial.UserSerialisationService;
-
 public class IONIOMain {
 
     public static void main(String[] args) {
@@ -25,8 +21,9 @@ public class IONIOMain {
 //        service.deleteDir(FileType.FILE_DIR.getPath());
 //        service.createDir(FileType.FILE_TEMP_DIR.getPath());
 //        service.moveDir(FileType.FILE_DIR.getPath(), FileType.FILE_COPY_DIR.getPath());
-        UserSerialisationService service = new UserSerialisationService();
-        service.serialize();
-        service.deserialize();
+//        UserSerialisationService service = new UserSerialisationService();
+//        service.serialize();
+//        service.deserialize();
+        new FileIOService().csvTest();
     }
 }
