@@ -34,27 +34,35 @@ public class DepartmentController {
         return "redirect:/departments";
     }
 
-    @PutMapping("/{id}")
-    private ResponseEntity<ResponseContainer<Boolean>> update(@RequestBody DepartmentDtoRequest dto, @PathVariable Long id) {
-        departmentFacade.update(dto, id);
-        return ResponseEntity.ok(new ResponseContainer<>(true));
-    }
-
-    @DeleteMapping("/{id}")
-    private ResponseEntity<ResponseContainer<Boolean>> delete(@PathVariable Long id) {
-        departmentFacade.delete(id);
-        return ResponseEntity.ok(new ResponseContainer<>(true));
-    }
-
-    @GetMapping("/{id}")
-    private ResponseEntity<ResponseContainer<Department>> findById(@PathVariable Long id) {
-        return ResponseEntity.ok(new ResponseContainer<>(departmentFacade.findById(id)));
-    }
-
     @GetMapping
     public String findAll(Model model) {
         List<Department> all = departmentFacade.findAll();
         model.addAttribute("departments", all);
         return "departments/departments-all";
     }
+
+    @GetMapping("/delete/{id}")
+    public String delete(@PathVariable Long id) {
+        departmentFacade.delete(id);
+        return "redirect:/departments";
+    }
+
+//    @PutMapping("/{id}")
+//    private ResponseEntity<ResponseContainer<Boolean>> update(@RequestBody DepartmentDtoRequest dto, @PathVariable Long id) {
+//        departmentFacade.update(dto, id);
+//        return ResponseEntity.ok(new ResponseContainer<>(true));
+//    }
+//
+//    @DeleteMapping("/{id}")
+//    private ResponseEntity<ResponseContainer<Boolean>> delete(@PathVariable Long id) {
+//        departmentFacade.delete(id);
+//        return ResponseEntity.ok(new ResponseContainer<>(true));
+//    }
+//
+//    @GetMapping("/{id}")
+//    private ResponseEntity<ResponseContainer<Department>> findById(@PathVariable Long id) {
+//        return ResponseEntity.ok(new ResponseContainer<>(departmentFacade.findById(id)));
+//    }
+
+
 }

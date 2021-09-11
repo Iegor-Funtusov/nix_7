@@ -15,7 +15,7 @@
         <div class="col-12">
             <div class="card mb-2 mt-2">
                 <div class="card-header">
-                    All Employees
+                    All Employees by <span th:text="${department.getName()}"></span>
                 </div>
                 <div class="card-body">
                     <table class="table table-sm table-hover">
@@ -38,6 +38,13 @@
                         </tr>
                         </tbody>
                     </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="card mt-2">
+                <div class="card-header">
+                    <a type="button" class="btn btn-primary" th:href="@{'/employees/new?departmentId=' + ${department.getId()}}">Add</a>
                 </div>
             </div>
         </div>

@@ -8,4 +8,5 @@ import java.util.List;
 public interface EmployeeService extends CrudService<Employee> {
 
     List<Employee> findAllByDepartment(Department department);
+    void delete(List<Employee> employees);
 }

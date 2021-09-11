@@ -2,9 +2,12 @@ package ua.com.alevel.facade.impl;
 
 import org.springframework.stereotype.Service;
 import ua.com.alevel.dto.request.DepartmentDtoRequest;
+import ua.com.alevel.dto.response.EmployeeDtoResponse;
 import ua.com.alevel.entity.Department;
+import ua.com.alevel.entity.Employee;
 import ua.com.alevel.facade.DepartmentFacade;
 import ua.com.alevel.service.DepartmentService;
+import ua.com.alevel.service.EmployeeService;
 
 import java.util.List;
 
@@ -12,9 +15,11 @@ import java.util.List;
 public class DepartmentFacadeImpl implements DepartmentFacade {
 
     private final DepartmentService departmentService;
+    private final EmployeeService employeeService;
 
-    public DepartmentFacadeImpl(DepartmentService departmentService) {
+    public DepartmentFacadeImpl(DepartmentService departmentService, EmployeeService employeeService) {
         this.departmentService = departmentService;
+        this.employeeService = employeeService;
     }
 
     @Override
@@ -34,6 +39,8 @@ public class DepartmentFacadeImpl implements DepartmentFacade {
     @Override
     public void delete(Long id) {
         if (departmentService.existById(id)) {
+            List<Employee> employees = employeeService.findAllByDepartment(departmentService.findById(id));
+            employeeService.delete(employees);
             departmentService.delete(id);
         }
     }

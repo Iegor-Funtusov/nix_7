@@ -25,6 +25,7 @@
                             <th>id</th>
                             <th>name</th>
                             <th>show employees</th>
+                            <th>delete</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -34,6 +35,9 @@
                             <td th:text="${department.getName()}"></td>
                             <td>
                                 <a th:href="@{'/employees/department/' + ${department.getId()}}" type="button" class="btn btn-light">details</a>
+                            </td>
+                            <td>
+                                <a th:href="@{'/departments/delete/' + ${department.getId()}}" type="button" class="btn btn-danger">delete</a>
                             </td>
                         </tr>
                         </tbody>
